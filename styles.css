@@ -1,0 +1,218 @@
+html, body { height: 100%; }
+body { margin: 0; }
+
+.container{
+
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vh;
+font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-image: url('assets/black\ texture.jpg'); /* <-- Add this line */
+    background-size: cover;      /* Make image cover the whole area */
+    background-repeat: no-repeat;/* Prevent tiling */
+    background-position: center; /* Center the image */
+    color: whitesmoke;
+    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        row-gap: 10px;
+        grid-template-areas: 
+            'header header'
+            'profilepic aboutme'
+            'nav nav'
+            'estudios estudios'
+            'hardskills softskills'
+            'proyectpic proyects'
+            'footer footer';
+          
+}
+h2{
+    font-size: xx-large;
+}
+h3{
+    font-size: x-large;
+}
+
+
+.header {
+  grid-area: header;
+  padding: 20px;
+  font-size: xx-large;
+}
+
+.profilepic {
+  grid-area: profilepic;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  justify-self: center;
+}
+
+.profilepic img {
+  width: 70vh;
+  height: auto;
+  border-radius: 10px;
+}
+
+.aboutme {
+  grid-area: aboutme;
+  padding: 30px;
+  text-align: justify;
+}
+.aboutme a {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.nav {
+  grid-area: nav;
+  padding: 20px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  list-style: none;
+}
+.nav ul li {
+  min-width: 80px;
+  padding: 8px 12px;
+  text-align: center;
+}
+.nav ul li a {
+  text-decoration: none;
+  font-size: large;
+  color: whitesmoke;
+   text-decoration: underline;
+}
+
+.estudios {
+  grid-area: estudios;
+  padding: 20px;
+  
+}
+
+.estudios img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+.box{
+  width: 80%;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 16px 24px;
+  display: inline-block;
+  background: transparent;
+  margin: 0;
+}
+.hardskills {
+  grid-area: hardskills;
+  padding: 20px;
+  padding-left: 30%;
+}
+.hardskills ul li {
+  text-align: left;
+}
+
+.softskills {
+  grid-area: softskills;
+  padding: 20px;
+  padding-right: 30%;
+}
+.softskills ul li {
+  text-align: left;
+  
+}
+.proyectpic {
+  grid-area: proyectpic;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  justify-self: center;
+  padding-left: 30%;
+}
+.proyectpic img {
+  width: 400px;
+  height: 40vh;
+  border-radius: 10px;
+}
+.proyects {
+  grid-area: proyects;
+  padding: 30px;
+  text-decoration: none;
+  padding-right: 30%;
+  text-align: left;
+}
+
+.proyects a {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 8px 20px; 
+  text-align: center;
+  background-color: rgb(28, 28, 28);
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer a {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+:root
+{
+    --1st-color: #33658a;
+    --2nd-color: #ffffff;
+    --3rd-color: #d6eaff;
+    --4th-color: #001f2c;
+}
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  opacity: 1 !important;
+  animation: fadeInRow 1.2s ease forwards;
+}
+.header,
+.profilepic,
+.aboutme,
+.nav,
+.estudios,
+.hardskills,
+.softskills,
+.proyectpic,
+.proyects,
+.footer {
+  opacity: 0;
+}
+
+

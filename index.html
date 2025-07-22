@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastian Viel CV</title>
+  <link rel="icon" type="image/x-icon" href="assets/svico.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <div class="header">
+    <h1>SEBASTIAN VIEL</h1>
+  </div>
+
+    <div class="profilepic">
+    <img src="assets/sebi horizontal.png" alt="Profile Picture">
+    
+    
+    </div>
+    
+      <div class="aboutme">
+      <h3>Sobre Mí</h3>
+      <p>Soy un apasionado del mundo tech con formación reciente en Desarrollo Frontend (Coderhouse) y actualmente cursando la Licenciatura en Programación en la UCES. Me entusiasma especialmente el área de QA Testing, donde quiero seguir creciendo profesionalmente. Tengo conocimientos en HTML, JavaScript, TypeScript y Python, y me adapto rápidamente a nuevos entornos de trabajo y tecnologías. Busco integrarme a un equipo que valore el aprendizaje constante, el trabajo colaborativo y la mejora continua.</p>
+      <p>📄 Descargá mi CV acá → <a href="assets/Sebastian Viel CV ES.pdf"> Currículum Vitae Viel</a></p>
+    </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#estudios">Estudios</a></li>
+          <li><a href="#hardskills">Habilidades</a></li>
+          <li><a href="#proyects">Proyectos</a></li>
+          <li><a href="#footer">Contacto</a></li>
+        </ul>
+      </div>
+
+        <div class ="estudios" id="estudios">
+        <h2>Certificaciones</h2>
+        <img src="assets/676c835a9f7020f017195b0d.png" alt="Desarrollo web" width="300px">
+        <img src="assets/277bfe88-ccc6-4646-9a6c-0f59b47310ba.png" alt="JavaScript" width="300px">
+        <img src="assets/686ffdac9d239809d3ca389d.png" alt="Angular" width="300px">
+        </div>
+
+        
+        <div class="hardskills" id="hardskills">
+          <div class="box">
+        <h3>Habilidades Técnicas</h3>
+        <ul>
+          <li>HTML</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+            <li>Angular</li>
+          <li>Python</li>
+          <li>Figma</li>
+          <li>Testing Básico</li>
+          <li>Microsoft Office</li>
+
+          </ul>
+          </div>
+        </div>
+
+        <div class="softskills">
+          <div class="box">
+        <h3>Habilidades Blandas</h3>
+        <ul>
+          <li>Adaptabilidad</li>
+          <li>Trabajo en equipo</li>
+          <li>Comunicación efectiva</li>
+          <li>Resolución de problemas</li>
+          <li>Pensamiento Analítico</li>
+          <li>Atención al detalle</li>
+          <li>Proactividad</li>
+          <li>Aprendizaje rápido</li>
+          </ul>
+        </div>
+        </div>
+        <div class="proyectpic">
+            <img src="assets/stockprog.jpg" alt="GitHub">
+        </div>
+        
+        <div class="proyects" id="proyects">
+          <h3>Portafolio</h3>
+          <p>Ve mis últimos proyecto en <a href="https://github.com/Zikoloogo/ProgramacionReactivaViel.git"> GitHub</a></p>
+          
+        </div>
+
+        <div class="footer" id="footer">
+        <ul>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/sebastian-viel/">Sebastian Viel</a></li>
+          <li>Gmail: sebas.viel@gmail.com</li>
+        <li>Teléfono: 11-4171-9121</li>
+        </ul>
+        </div>
+
+</div>
+
+<script>
+const rows = [
+  '.header',
+  '.profilepic',
+  '.aboutme',
+  '.nav',
+  '.estudios',
+  '.hardskills',
+  '.softskills',
+  '.proyectpic',
+  '.proyects',
+  '.footer'
+];
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+rows.forEach(selector => {
+  document.querySelectorAll(selector).forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>
