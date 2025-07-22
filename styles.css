@@ -1,39 +1,45 @@
-html, body { height: 100%; }
-body { margin: 0; }
-
-.container{
-
-    display: grid;
-    min-height: 100vh;
-    min-width: 100vh;
-font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background-image: url('assets/black\ texture.jpg'); 
-    background-size: cover;      
-    background-repeat: no-repeat;
-    background-position: center; 
-    color: whitesmoke;
-    
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
-        row-gap: 40px;
-        grid-template-areas: 
-            'header header'
-            'profilepic aboutme'
-            'nav nav'
-            'estudios estudios'
-            'hardskills softskills'
-            'proyectpic proyects'
-            'footer footer';
-          
-}
-h2{
-    font-size: xx-large;
-}
-h3{
-    font-size: x-large;
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-image: url('assets/black texture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: whitesmoke;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  row-gap: 40px;
+  grid-template-areas:
+    'header header'
+    'profilepic aboutme'
+    'nav nav'
+    'estudios estudios'
+    'hardskills softskills'
+    'proyectpic proyects'
+    'footer footer';
+}
+
+h2 {
+  font-size: xx-large;
+}
+h3 {
+  font-size: x-large;
+}
 
 .header {
   grid-area: header;
@@ -90,13 +96,12 @@ h3{
   text-decoration: none;
   font-size: large;
   color: whitesmoke;
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 .estudios {
   grid-area: estudios;
   padding: 20px;
-  
 }
 
 .estudios img {
@@ -104,7 +109,8 @@ h3{
   height: 200px;
   border-radius: 10px;
 }
-.box{
+
+.box {
   width: 80%;
   border: 1px solid #ffffff;
   border-radius: 10px;
@@ -113,6 +119,7 @@ h3{
   background: transparent;
   margin: 0;
 }
+
 .hardskills {
   grid-area: hardskills;
   padding: 20px;
@@ -129,8 +136,8 @@ h3{
 }
 .softskills ul li {
   text-align: left;
-  
 }
+
 .proyectpic {
   grid-area: proyectpic;
   max-width: 100%;
@@ -145,6 +152,7 @@ h3{
   height: 40vh;
   border-radius: 10px;
 }
+
 .proyects {
   grid-area: proyects;
   padding: 30px;
@@ -160,7 +168,7 @@ h3{
 
 .footer {
   grid-area: footer;
-  padding: 8px 20px; 
+  padding: 8px 20px;
   text-align: center;
   background-color: rgb(28, 28, 28);
 }
@@ -168,7 +176,7 @@ h3{
 .footer ul {
   display: flex;
   justify-content: center;
-  gap: 24px; 
+  gap: 24px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -179,12 +187,11 @@ h3{
   text-decoration: underline;
 }
 
-:root
-{
-    --1st-color: #33658a;
-    --2nd-color: #ffffff;
-    --3rd-color: #d6eaff;
-    --4th-color: #001f2c;
+:root {
+  --1st-color: #33658a;
+  --2nd-color: #ffffff;
+  --3rd-color: #d6eaff;
+  --4th-color: #001f2c;
 }
 
 @keyframes fadeInRow {
@@ -215,4 +222,68 @@ h3{
   opacity: 0;
 }
 
+@media (max-width: 720px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    row-gap: 20px;
+    grid-template-areas:
+      'header'
+      'profilepic'
+      'aboutme'
+      'nav'
+      'estudios'
+      'hardskills'
+      'softskills'
+      'proyectpic'
+      'proyects'
+      'footer';
+    width: 100vw;
+    padding: 0 8px;
+  }
 
+  .header {
+    font-size: large;
+    padding: 12px;
+  }
+
+  .profilepic img {
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .aboutme,
+  .estudios,
+  .hardskills,
+  .softskills,
+  .proyectpic,
+  .proyects,
+  .footer {
+    padding: 12px;
+    text-align: left;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .proyectpic img {
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+  }
+
+    .footer ul {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
