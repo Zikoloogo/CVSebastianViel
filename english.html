@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Viel Resume</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <div class="header">
+    <h1>SEBASTIAN VIEL</h1>
+   <div class="redirect">
+  <button class="language-toggle" onclick="window.location.href='index.html'">
+    <img src="assets/arg.png" alt="Español" width="40" />
+  </button>
+</div>
+
+</div>
+
+    <div class="profilepic">
+    <img src="assets/sebi horizontal.png" alt="Profile Picture">
+    
+    
+    </div>
+    
+      <div class="aboutme">
+  <h3>About Me</h3>
+  <p>
+    I'm passionate about the tech world, with recent training in Frontend Development (Coderhouse) and currently pursuing a Bachelor's Degree in Programming at UCES. I’m especially enthusiastic about QA Testing, where I aim to grow professionally. I have knowledge in HTML, JavaScript, TypeScript, and Python, and I adapt quickly to new work environments and technologies. I'm looking to join a team that values continuous learning, collaboration, and ongoing improvement.
+  </p>
+  <p>📄 Download my resume here → <a href="assets/Sebastian viel Resume 2025.pdf">Viel Resume</a></p>
+</div>
+
+<div class="nav">
+  <ul>
+    <li><a href="#estudios">Education</a></li>
+    <li><a href="#hardskills">Skills</a></li>
+    <li><a href="#proyects">Projects</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+</div>
+
+<div class="estudios" id="estudios">
+  <h2>Certifications</h2>
+  <img src="assets/676c835a9f7020f017195b0d.png" alt="Web Development" width="300px">
+  <img src="assets/277bfe88-ccc6-4646-9a6c-0f59b47310ba.png" alt="JavaScript" width="300px">
+  <img src="assets/686ffdac9d239809d3ca389d.png" alt="Angular" width="300px">
+</div>
+
+<div class="hardskills" id="hardskills">
+  <div class="box">
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>Angular</li>
+      <li>Python</li>
+      <li>Figma</li>
+      <li>Basic Testing</li>
+      <li>Microsoft Office</li>
+    </ul>
+  </div>
+</div>
+
+<div class="softskills">
+  <div class="box">
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Adaptability</li>
+      <li>Teamwork</li>
+      <li>Effective Communication</li>
+      <li>Problem Solving</li>
+      <li>Analytical Thinking</li>
+      <li>Attention to Detail</li>
+      <li>Proactivity</li>
+      <li>Fast Learner</li>
+    </ul>
+  </div>
+</div>
+
+<div class="proyectpic">
+  <img src="assets/stockprog.jpg" alt="GitHub">
+</div>
+
+<div class="proyects" id="proyects">
+  <h3>Portfolio</h3>
+  <p>Check out my latest projects on <a href="https://github.com/Zikoloogo/ProgramacionReactivaViel.git">GitHub</a></p>
+</div>
+
+<div class="footer" id="footer">
+  <ul>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/sebastian-viel/">Sebastian Viel</a></li>
+    <li>Email: sebas.viel@gmail.com</li>
+    <li>Phone: 11-4171-9121</li>
+  </ul>
+</div>
+
+<script>
+const rows = [
+  '.header',
+  '.profilepic',
+  '.aboutme',
+  '.nav',
+  '.estudios',
+  '.hardskills',
+  '.softskills',
+  '.proyectpic',
+  '.proyects',
+  '.footer'
+];
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+rows.forEach(selector => {
+  document.querySelectorAll(selector).forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

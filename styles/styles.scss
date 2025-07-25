@@ -16,7 +16,7 @@ html, body {
   min-width: 0;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  background-image: url('assets/black texture.jpg');
+  background-image: url('../assets/black-texture.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -287,3 +287,16 @@ h3 {
       gap: 8px;
     }
   }
+
+.redirect {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.language-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: large;
+}
